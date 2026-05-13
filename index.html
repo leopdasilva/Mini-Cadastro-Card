@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        <!-- Formulário -->
+        <section class="card-form">
+            <h2>Preencha os dados</h2>
+            
+            <div class="input-group">
+                <label>Nome</label>
+                <input type="text" id="input-nome" placeholder="Digite seu nome">
+            </div>
+
+            <div class="input-group">
+                <label>Idade</label>
+                <input type="number" id="input-idade" placeholder="Digite sua idade">
+            </div>
+
+            <div class="input-group">
+                <label>Curso</label>
+                <input type="text" id="input-curso" placeholder="Digite seu curso">
+            </div>
+
+            <div class="input-group">
+                <label>Cidade</label>
+                <input type="text" id="input-cidade" placeholder="Ex: Curitiba">
+            </div>
+
+            <div class="input-group">
+                <label>Estado</label>
+                <input type="text" id="input-estado" placeholder="Ex: PR" maxlength="2">
+            </div>
+
+            <div class="input-group">
+                <label>Sua Foto</label>
+                <!-- Alterado para aceitar arquivo -->
+                <input type="file" id="input-foto" accept="image/*">
+            </div>
+
+            <button class="btn-gerar" id="btn-gerar">Gerar cartão</button>
+
+            <div class="error-msg" id="msg-erro" style="display: none;">
+                Preencha todos os campos!
+            </div>
+        </section>
+
+        <!-- Cartão de Identidade -->
+        <section class="id-card">
+            <header class="card-header"></header>
+            <div class="profile-pic">
+                <img src="" id="card-img" alt="Preview">
+            </div>
+            
+            <div class="card-content">
+                <h1 class="user-name" id="card-nome">Seu Nome</h1>
+                <p class="user-age" id="card-idade">-- anos</p>
+
+                <div class="user-details">
+                    <p><strong>Curso:</strong> <span id="card-curso">---</span></p>
+                    <p><strong>Cidade:</strong> <span id="card-cidade">---</span></p>
+                    <p><strong>Estado:</strong> <span id="card-estado">---</span></p>
+                    <p><strong>Membro desde:</strong> <span>Maio de 2026</span></p>
+                </div>
+                <hr>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
